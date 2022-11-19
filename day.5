@@ -1,0 +1,89 @@
+import java.util.scanner;
+public class Main {
+    public static void main(String[] args) {
+    
+            int x, y , z;
+
+            int sub;
+            double dev;
+            double multi;
+            Scanner s = new Scanner(System.in);
+            System.out.println("Enter the first number:");
+            x = s.nextInt();
+            System.out.println("Enter the second number:");
+            y = s.nextInt();
+            System.out.println("The menu is ");
+            System.out.println(" 1- (+) \n 2- (-)\n 3- (*) \n 4-(/) \n 5- / \n " +
+                    "6- larage \n 7- small \n 8- average \n ");
+            System.out.println("please enter -1 for stop theis operation ");
+            z=s.nextInt();
+
+            switch (z){
+                case 1:
+                    System.out.println(" the result of this operation is ");
+
+                    addNum(x,y);
+
+                case 2:
+
+                    System.out.println(" the result of this operation is ");
+                    subNum(x , y);
+                case 3:
+                    System.out.println(" the result of this operation is ");
+
+                    multiNum(x,y);
+                case 4:
+                    System.out.println(" the result of this operation is ");
+                    multiNum(x ,y);
+                case 5:
+
+                    System.out.println(" the result of this operation is ");
+
+                    devNum(x , y);
+                case 6:
+                    System.out.println("the largest number is");
+                    large(x ,y);
+                case 7 :
+                    System.out.println(" the smallest number is : ");
+                    small(x,y);
+                case 8 :
+                    System.out.println(" the mean of these numbers are");
+                    average(x , y);
+            }
+            System.out.println("Thank you ");
+
+        }
+        public static void addNum(int x , int y ){
+            int add ;
+            add = x+y;
+            System.out.println(add);
+        }
+        public static void subNum(int x , int y){
+            int sub;
+            sub = x-y;
+            System.out.println(sub);
+        }
+        public static void multiNum(int x , int y){
+            int multi;
+            multi=x*y;
+            System.out.println(multi);
+        }
+        public  static void devNum(int x , int y){
+            int dev;
+            dev = x/ y;
+            System.out.println(dev);
+        }
+        public static void  large(int x , int y){
+            System.out.println(Math.max(x, y));
+        }
+
+        public static void small(int x , int y){
+            System.out.println(Math.min(x , y));
+        }
+
+        public static void average(int x , int y){
+            int res= (x+y) / 2 ;
+            System.out.println(res);
+        }
+
+}
